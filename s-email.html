@@ -26,8 +26,8 @@
 
   <ul>
     <li>(70%) Write a Haskell program that searches an input file for an
-    email and replaces it with the <code>email</code> environment
-    variable.</li>
+    email and replaces it with the value of the <code>email</code>
+    environment variable.</li>
 
     <li>(10%) Annotate your Haskell source code with <a href=
     "http://www.haskell.org/haddock/">Haddock</a>. Improve it with <a href=
@@ -41,9 +41,11 @@
 
   <p>If the <code>email</code> environment variable is set and an input file
   with an email is given, <code>s-email</code> replaces that email with the
-  <code>email</code> environment variable:</p>
+  value of the <code>email</code> environment variable:</p>
   <pre>
-<code>    $ cat README.md
+<code>    $echo $email
+    jpvillaisaza@gmail.com
+    $ cat README.md
     s-email
     =======
 
