@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org">
+
+  <title>Programming lab 2: Substituting emails with regular
+  expressions</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+  <h1>Programming lab 2: Substituting emails with regular expressions</h1>
+
+  <p><strong>Submission deadline: Friday, September 21, 2012 (11:59
+  p.m.)</strong></p>
+
+  <h2>Introduction</h2>
+
+  <p>The aim of this programming assignment is to write a Haskell program
+  that searches and replaces an email with regular expressions.</p>
+
+  <h2>Assignment (80%)</h2>
+
+  <ul>
+    <li>(70%) Write a Haskell program that searches an input file for an
+    email and replaces it with the <code>email</code> environment
+    variable.</li>
+
+    <li>(10%) Annotate your Haskell source code with <a href=
+    "http://www.haskell.org/haddock/">Haddock</a>. Improve it with <a href=
+    "http://community.haskell.org/~ndm/hlint/">HLint</a>.</li>
+
+    <li>(Optional) Package your Haskell program with <a href=
+    "http://www.haskell.org/cabal/">Cabal</a>.</li>
+  </ul>
+
+  <h2>Examples (Input and output)</h2>
+
+  <p>If the <code>email</code> environment variable is set and an input file
+  with an email is given, <code>s-email</code> replaces that email with the
+  <code>email</code> environment variable:</p>
+  <pre>
+<code>    $ cat README.md
+    s-email
+    =======
+
+    ---
+
+    Juan Pedro Villa Isaza &lt;jvillais@gmail.com&gt;
+    $ s-email README.md
+    $ cat README.md
+    s-email
+    =======
+
+    ---
+
+    Juan Pedro Villa Isaza &lt;jpvillaisaza@gmail.com&gt;
+</code>
+</pre>
+
+  <p>If the <code>email</code> environment variable is set and an input file
+  without an email is given, <code>s-email</code> does nothing:</p>
+  <pre>
+<code>    $ cat README.md
+    s-email
+    =======
+    $ s-email README.md
+    $ cat README.md
+    s-email
+    =======
+</code>
+</pre>
+
+  <p>If the <code>email</code> environment variable is not set,
+  <code>s-email</code> displays an error message:</p>
+  <pre>
+<code>    $ cat README.md
+    s-email
+    =======
+
+    ---
+
+    Juan Pedro Villa Isaza &lt;jvillais@gmail.com&gt;
+    $ s-email README.md
+    the `email` environment variable is not set
+    $ cat README.md
+    s-email
+    =======
+
+    ---
+
+    Juan Pedro Villa Isaza &lt;jvillais@gmail.com&gt;
+</code>
+</pre>
+
+  <h2>Miscellany (10%)</h2>
+
+  <ul>
+    <li>
+      <p>Before submitting your code, clean it up! Clean code</p>
+
+      <ul>
+        <li>does not have long lines (at most 80 columns),</li>
+
+        <li>has a consistent layout,</li>
+
+        <li>has type signatures for everything,</li>
+
+        <li>has good comments,</li>
+
+        <li>has no junk (unused code, commented code, unnecessary code),</li>
+
+        <li>has no overly complicated function definitions, and</li>
+
+        <li>does not contain any repetitve code.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p>Useless whitespace can be a nuisance. Delete all unnecessary spaces
+      at the end of a line, or empty lines at the end of a file.</p>
+    </li>
+
+    <li>
+      <p>Your Haskell program will be tested with GHC 7.4.1 and the following
+      GHC options:</p>
+
+      <ul>
+        <li><code>-Wall</code></li>
+
+        <li><code>-Werror</code></li>
+
+        <li><code>-fwarn-tabs</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Submission (10%)</h2>
+
+  <p>Send an email to <a href=
+  "mailto:asicard@eafit.edu.co">asicard@eafit.edu.co</a> and <a href=
+  "mailto:jvillais@eafit.edu.co">jvillais@eafit.edu.co</a>, and attach a
+  compressed file with your Haskell program. Include your Haskell source code
+  and a <code>README</code>.</p>
+
+  <h2>Notes</h2>
+
+  <ul>
+    <li>The programming assignment may either be solved on your own, or
+    jointly with one other student taking the course.</li>
+
+    <li>Write in English.</li>
+
+    <li>You can import any regular expression backend.</li>
+
+    <li>A good introduction to input and output with Haskell is <a href=
+    "http://learnyouahaskell.com/input-and-output">http://learnyouahaskell.com/input-and-output</a>.</li>
+  </ul>
+  <hr>
+
+  <p><a href=
+  "http://www1.eafit.edu.co/asicard/courses/automata-CB0081/">Automata and
+  formal languages - CB0081</a></p>
+
+  <p><a href="http://validator.w3.org/check?uri=referer"><img src=
+  "http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict"
+  height="31" width="88"></a></p>
+</body>
+</html>
