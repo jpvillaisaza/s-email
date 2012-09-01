@@ -43,19 +43,24 @@
   with an email is given, <code>s-email</code> replaces that email with the
   value of the <code>email</code> environment variable:</p>
   <pre>
-<code>    $echo $email
+<code>    $ echo $email
     jpvillaisaza@gmail.com
-    $ cat README.md
-    s-email
-    =======
+
+    $ cat README.txt
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Quisque vel diam nec mi malesuada eleifend eu in lectus.
+    Vestibulum ante.
 
     ---
 
     Juan Pedro Villa Isaza &lt;jvillais@gmail.com&gt;
-    $ s-email README.md
-    $ cat README.md
-    s-email
-    =======
+
+    $ s-email README.txt
+
+    $ cat README.txt
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Quisque vel diam nec mi malesuada eleifend eu in lectus.
+    Vestibulum ante.
 
     ---
 
@@ -66,31 +71,39 @@
   <p>If the <code>email</code> environment variable is set and an input file
   without an email is given, <code>s-email</code> does nothing:</p>
   <pre>
-<code>    $ cat README.md
-    s-email
-    =======
-    $ s-email README.md
-    $ cat README.md
-    s-email
-    =======
+<code>    $ cat README.txt
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Quisque vel diam nec mi malesuada eleifend eu in lectus.
+    Vestibulum ante.
+
+    $ s-email README.txt
+
+    $ cat README.txt
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Quisque vel diam nec mi malesuada eleifend eu in lectus.
+    Vestibulum ante.
 </code>
 </pre>
 
   <p>If the <code>email</code> environment variable is not set,
   <code>s-email</code> displays an error message:</p>
   <pre>
-<code>    $ cat README.md
-    s-email
-    =======
+<code>    $ cat README.txt
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Quisque vel diam nec mi malesuada eleifend eu in lectus.
+    Vestibulum ante.
 
     ---
 
     Juan Pedro Villa Isaza &lt;jvillais@gmail.com&gt;
-    $ s-email README.md
+
+    $ s-email README.txt
     the `email` environment variable is not set
-    $ cat README.md
-    s-email
-    =======
+
+    $ cat README.txt
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Quisque vel diam nec mi malesuada eleifend eu in lectus.
+    Vestibulum ante.
 
     ---
 
